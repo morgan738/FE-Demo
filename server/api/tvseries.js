@@ -5,9 +5,10 @@ const router = express.Router()
 //we need to get a reference to the relevant table
 const {TvShows} = require("../db")
 
-//GET route --> /tvshows/
+//GET route --> /api/tvshows/
 //this route returns all tvshows
 router.get('/', async (req, res, next) => {
+    console.log("In the backend")
     //remember async await means you want to try catch
     try {
         //sequelize method to findall of our tvshows
@@ -20,7 +21,7 @@ router.get('/', async (req, res, next) => {
     }
 })
 
-//GET route --> /tvshows/:id
+//GET route --> /api/tvshows/:id
 //this route returns a single tvshow
 router.get("/:id", async(req,res,next) => {
     //remember async await means you want to try catch
@@ -40,7 +41,7 @@ router.get("/:id", async(req,res,next) => {
     }
 })
 
-//POST route --> /tvshows/
+//POST route --> /api/tvshows/
 //this route will create a new tvshow and add it to our db
 router.post('/', async(req,res,next) => {
     //remember async await means you want to try catch
