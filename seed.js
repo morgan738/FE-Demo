@@ -1,7 +1,7 @@
 //this file is where we add data into our database
 
 //i need to get referenes to my database and the tables in it
-const {db, TvShows} = require('./db')
+const {db, TvShows} = require('./server/db')
 
 //this function will create data in my db
 async function syncDB(){
